@@ -1,0 +1,27 @@
+Hello! This is signup page!
+<br><br><br>
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+<br>
+<form method='POST' action={% url 'signup' %}>
+{% csrf_token %}
+	Username:
+<br>
+<input type=text name=username>
+<br>
+<br>
+Password: 
+<br>     
+<input type=password name=password1>
+<br>
+<br>
+Confirm Password:
+<br>
+<input type=password name=password2>
+<br>
+<br>
+<input type=submit value=SignUp>
+</form>
